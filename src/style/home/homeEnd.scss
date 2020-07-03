@@ -1,0 +1,97 @@
+.home-end {
+    display: grid;
+    grid-gap: 40px;
+    padding-top: 4rem;
+    margin: 10px;
+
+    .btn, .btn-primary {
+        background-color: $brandColor !important;
+        border-color: white !important;
+    }
+
+    &__labnotes {
+
+        &__line{
+            grid-column: 1/-1;
+            border-top: 1px solid #ccc;
+            margin-bottom: 24px;
+        }
+        
+        &__title {
+            display: grid;
+            grid-template-columns: 2fr;
+
+
+            .view{
+                grid-column: 4;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__subscribe {
+            border: 2px solid #e2ebf2;
+            border-radius: 1rem;
+            padding: 1rem 2rem 2rem;
+            margin-top: 3rem;
+        }
+    
+    }
+    &__notes {
+
+        &__date {
+            
+        }
+
+        &__note {
+            font-weight: bold;
+        }
+
+        &__pdf {
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #eef2f7;
+        }
+
+    }
+
+    &__resources {
+        grid-column: resrouces-s/resources-e;
+
+        &__line{
+            grid-column: 1/-1;
+            border-top: 1px solid #ccc;
+            margin-bottom: 24px;
+        }
+        
+        &__title {
+            display: grid;
+            grid-template-columns: 2fr;
+
+            .view{
+                grid-column: 4;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .home-end__resources__pdf > .resources {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            &__image {
+                img{
+                    width: 107px;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,27 @@
+.shop{
+    
+    &__filter{
+
+        &_container{
+            border-radius: 20px;
+            .card-header:first-child{
+                border: 0px;
+            }
+        }
+
+        &_header{
+            cursor: pointer;
+        }
+
+        font-size: 16px !important;
+
+        &_label{
+            font-weight: bold;
+        }
+
+        &_control{
+            height: 23px !important;
+        }
+    }   
+    
+}

@@ -1,0 +1,12 @@
+.promotions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+    margin: 110px;
+
+    .btn-primary {
+        background-color: $brandColor;
+        border-color: $brandColor;
+    }
+}

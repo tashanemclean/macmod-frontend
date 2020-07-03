@@ -1,0 +1,91 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html {
+    // font-size: 62.5%;
+    font-size: 14px;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Open Sans";
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osk-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@import 'layout.scss';
+@import 'headernavbar.scss';
+@import 'pageTitle.scss';
+@import 'form-fields.scss';
+@import 'details.scss';
+
+// AUTH
+@import 'auth/signin.scss';
+@import 'auth/signup.scss';
+
+// ACCOUNT
+@import "account/account-information.scss";
+@import "account/purchase-history.scss";
+@import "account/account.scss";
+
+// SHOP
+@import "shop/shop.scss";
+@import "shop/shop-filter.scss";
+@import "shop/shop-search-bar.scss";
+@import "shop/shop-product.scss";
+
+// CARTY
+@import "shop/shop-cart.scss";
+@import 'shop/cart-product.scss';
+
+
+// QUANTITY
+@import "./quantity.scss";
+@import "./green-price-tag.scss";
+
+// REVIEW
+@import "order/review.scss";
+@import 'order/reviewForm.scss';
+@import 'order/reviewProduct.scss';
+
+// INFORMATION
+@import 'information/payment.scss';
+@import 'information/shipping.scss';
+
+@import 'information/info-help.scss';
+
+// HOME PAGE
+@import './home/home.scss';
+@import './home/homeEvents.scss';
+@import './home/homeEnd.scss';
+
+// BRANDS
+@import './brands/brands.scss';
+
+// RESOURECS
+@import './resources/resources.scss';
+@import './resources/resources-filter.scss';
+
+// PROMOTIONS
+@import './promotions/promotions.scss';
+
+// WHO WE ARE
+@import './whoWeAre.scss';
+
+// CONTACT US
+@import './contact-us/contactUs.scss';
+@import './contact-us//contactUsContainer.scss';
+
+// ORDERS &  CONFIRMATION
+@import './order/orderConfirmation.scss';
+@import './order/orders.scss';

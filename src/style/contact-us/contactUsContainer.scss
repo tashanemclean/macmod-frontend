@@ -1,0 +1,103 @@
+.contact-us__details-container {
+    grid-column: s/e;
+    grid-row: s/e;
+
+    &__contacts,&__info{
+        display: grid;
+    }
+
+    &__info {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+
+        margin: 35px;
+
+        .map, img {
+            display: grid;
+            justify-items: right;
+            width: 85%; 
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 1.8rem;
+            color: #000;
+
+            &__contact-methods {
+                display: grid;
+                grid-gap: 10px;
+            }
+            
+            .contact-phone,.contact-fax,.contact-email {
+                display: flex;
+                & > * {
+                    padding: 3px;
+                }
+
+                i {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        grid-row-gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(28.5rem, 1fr));
+        row-gap: 4rem;
+        column-gap: 1rem;
+        justify-items: center;
+        margin: 0 auto;
+
+
+
+        // if team lead exists placement will be above others
+        .contacts-teamlead {
+            display: flex;
+            grid-column: 1/-1;
+            grid-row: -3 /4;
+
+            .bio {
+                align-self: center;
+                font-weight: 400;
+                line-height: 1.7;
+                color: #4d4e67;
+            }
+        }
+        .contacts-reg {
+            display: flex;
+
+            .bio {
+                align-self: center;
+                font-weight: 400;
+                line-height: 1.7;
+                color: #4d4e67;
+            }
+        }
+
+        .photo img {
+            height: 12rem;
+        }
+    
+    }
+
+    &__form {
+        background-color: #eef2f7;
+        padding: 4rem 9rem;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-us__details-container__info {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us__details-container__form {
+        padding: 4rem 2rem;
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,28 @@
+.brands {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: s/e;
+    grid-gap: 30px;
+
+    &__items {
+        display: grid;
+        justify-content: center;
+
+        &__image {
+            margin: 30px;
+            width: 15rem;
+            align-self: center;
+        }
+
+        .btn-primary,.btn-primary:focus:active {
+            justify-self: center;
+
+            width: 8rem;
+            
+            background-color: $brandColor;
+            border-color: $brandColor;
+            outline-color: $brandColor;
+        }
+    }
+}

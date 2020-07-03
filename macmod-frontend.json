@@ -1,0 +1,10 @@
+{
+  apps : [
+    {
+      name: “macmod-frontend",
+      script: "npx",
+      interpreter: "none",
+      args: "npm start"
+    }
+  ]
+} 

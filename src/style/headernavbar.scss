@@ -1,0 +1,131 @@
+.header {
+    grid-row: header-s/header-e;
+    grid-column: 1/-1;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    margin-bottom: -22px;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: [img-s] 1fr [img-e links-s] 1fr [links-e];
+    
+    background-color: #333;
+
+    &__img {
+        transform: translateX(30px);
+        grid-column: img-s/img-e;
+        grid-row: 1/-1;
+        justify-self: left;
+        width: 12em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__links {
+        grid-column: links-s/links-e;
+        grid-row: 1/-1;
+
+        display: grid;
+        grid-template-rows: [s]1fr [e];
+        grid-column-gap: 46px;
+
+        color: #333;
+        font-size: 16px;
+    
+        & > * {
+            grid-row: s/e;
+        }
+        margin-right: 47px;
+    }
+
+    &__searchbar {
+        transform: translate(270px,-40px);
+        width: 50%;
+        &__input {
+            border-radius: 20px;
+            border: 1px solid #E6E6E6;
+            color: #808080;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        
+    }
+
+    &__cart-button {
+        background-color: $brandColor !important;
+        font-size: 28px;
+        color: white !important;
+        border-radius: 30px !important;
+
+        transform: translateY(-40px)
+    }
+    &__mail {
+        grid-row: 1;
+        background-color: $brandColor !important;
+        font-size: 28px;
+        color: white !important;
+        border-radius: 30px !important;
+    }
+}
+
+.brand-color {
+    color: $brandColor !important;
+}
+
+.navbar {
+    grid-row: navbar-s/navbar-e;
+    grid-column: 1/-1;
+    background-color: #333333;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+
+    display: grid;
+    grid-template-rows: [s]1fr [e];
+    align-items: center;
+
+    justify-content: center;
+    grid-column-gap: 8rem;
+
+    color: #FFF;
+    font-size: 16px;
+
+    & > * {
+        grid-row: s/e;
+    }
+
+    &__dropdown {
+        color: #FFF;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    &__link {
+        font-weight: 600;
+
+        &:hover {
+            color: white !important;
+            cursor: pointer;
+        }
+        
+        &:focus {
+            box-shadow: none !important;
+        }
+
+        .dropdown-items {
+            margin-right: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar__link {
+        padding: 8px;
+    }
+}
